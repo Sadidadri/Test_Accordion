@@ -1,0 +1,75 @@
+$textColor : #FBFCFF;
+$darkMainColor : #0C1821;
+$mainColor: #1B2A41;
+//import my font type
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.ttf');
+  }
+  
+
+:root {
+    color: $textColor;
+    font-family: 'Roboto', sans-serif;
+}
+
+#content{
+    margin-top:20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #accordion{
+        width: 50vw;
+        background-color:$darkMainColor;
+       
+        border: 1px solid black;
+        border-radius: 4px;
+
+        dt{
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+
+           
+        }
+
+        dd{
+            display: none;
+            margin-inline-start: 0;
+            padding: 0.5rem 1rem;
+            background-color: $mainColor;
+
+           
+        } 
+        
+    }
+
+}
+
+#imgContainer{
+    width: 300px;  
+    height: 200px;  
+    text-align: center;  
+}
+#ajaxImg{
+    width: 100%;
+    height: auto;
+    max-height: 100%; 
+}
+#catLink{
+    cursor: pointer;
+}
+.selected{
+    display: block !important;
+}
+   
+
+//Mobile styles
+@media (max-width: 800px) { 
+    #imgContainer{
+        width: 30vw;  }
+ }
